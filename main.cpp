@@ -364,7 +364,11 @@ void execute() {
 }
 
 int main(int argc, char** argv) {
-    if (!load_program("2048.obj")) {
+    if (argc != 2) {
+        std::cout << "Syntax is: " << argv[0] << " [file.obj]" << std::endl;
+        exit(1);
+    }
+    if (!load_program(argv[1])) {
         exit(1);
     }
     disable_input_buffering();
