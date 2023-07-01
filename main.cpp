@@ -149,7 +149,7 @@ bool load_program(std::string filename) {
 
     uint16_t max_read = MEMORY_MAX - origin;
     uint16_t *p = memory + origin;
-    is.read((char*) p, sizeof(uint16_t) * max_read);
+    is.read((char*) p, (sizeof(uint16_t) / sizeof(char)) * max_read);
     is.close();
 
     while (p < memory + MEMORY_MAX) {
