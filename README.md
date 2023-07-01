@@ -6,5 +6,9 @@ This is a virtual machine for [Little Computer 3](https://en.wikipedia.org/wiki/
 
 ```
 g++ main.cpp -o main
-./main
+./main 2048.obj
 ```
+
+# Credit
+
+2048: [https://github.com/rpendleton/lc3-2048](https://github.com/rpendleton/lc3-2048)
